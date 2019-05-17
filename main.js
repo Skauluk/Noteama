@@ -43,4 +43,20 @@ function($) {
 	setTimeout(function() {
 		$(".img3").attr("src","13.jpg");
 	}, 60000);
+	var grey = false;
+
+	$(".swap").click(function () {
+		if (grey == false) {
+		$('.hd').css("z-index",10);
+		$('.hd').css("visibility", "visible");
+		$('.side').css("z-index",10);
+		grey = true;
+	} else if (grey == true) {
+		$('.hd').css("z-index", -10);
+		$('.hd').css("visibility", "hidden");
+		$('.side').css("z-index",-10);
+		grey = false;
+	}
+
+	})
 })

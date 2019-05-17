@@ -11,35 +11,41 @@ html, body{
   line-height: 18px;
 }
 .side{
-  background: #07d864;
-  width: 240px;
+  display: none;
+  width: 100%;
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
-  z-index: 5;
+  z-index: 0;
   border-right: 0.5px solid;
 }
 .text{
-  padding: 20px 10px;
+  height: 45%;
   color:#4a4a4a;
   font-size: 24px;
   line-height: 20px;
   font-weight: normal;
-  z-index: 1000;
+  z-index: 10;
+  text-align: center;
+  align-items: center;
 }
-
-
+.side .text img {
+  text-align: center;
+  padding: 0px auto;
+  align-items: center;
+  width: 20%;
+}
 .text span{
   color:#ffffff;
   text-shadow: 2px 2px 2px black;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
-  padding: 0 10px 18px;
   text-align: center;
   display: block;
 }
 .menu{
+  height: 55%;
   margin-top: 0px;
 }
 .menu ul{
@@ -49,55 +55,59 @@ html, body{
 }
 .menu li{
   display: block;
-  height: 30px;
-  line-height: 30px;
+  height: 70px;
+  line-height: 70px;
+  cursor: pointer;
 }
 .menu li a{
   display: block;
   line-height: 30px;
-  font-size: 20px;
+  font-size: 400%;
   text-shadow: 2px 1px black; 
   font-family: myPTNarrow;
   color:#ffffff;
   text-decoration: none;
-  padding-left: 60px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 200px;
+  transition: all 300ms linear;
 }
 .menu li img {
-  width: 70%;
+  width: 20%;
   margin-top: 20%;
   align-items: center;
   text-align: center;
-  margin-left: 15%;
   border: 2px solid;
   border-radius: 10%;
-
 }
 .menu li a:hover{
   background: #16ef08;
 }
 .swap{
-  display: none;
+  display: inline;
   position: fixed;
-  width: 7%;
+  width: 60px;
   left: 0;
   top: 0;
-  height: 100%;
-  z-index: 6;
-  background: url(swipe.png) #1d282b center 20px no-repeat;
+  height: 60px;
+  z-index: 10;
+  background: url(swipe.png)  center  no-repeat;
+  background-size: 70%;
+  transition: all 300ms linear;
+}
+.swap:hover {
+  background: url(swipe.png) grey center  no-repeat;
 }
 .wrapper{
   position: relative;
   background: url(4.jpg);  
   background-size: 100%;
-  min-height: 100%;
+  min-height: 80%;
   min-width: 400px;
   max-width: 100%;
-  padding-left: 300px;
+  padding-left: 0px;
   padding-right: 0px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-.wrapper .text {
-  background: url;
 }
 .wrapper a{
   color:#576a6f;
@@ -150,8 +160,10 @@ p img{
   overflow: hidden;
   align-items: center;
   font-size: 13px;
-  padding: 20px 20px;
-    height: 100%;
+  min-height: 15%;
+  height: 150px;
+  background: url(4.jpg);  
+  background-size: 100%;  
 }
 .footer div{
   font-family: sans-serif;
@@ -166,33 +178,30 @@ p img{
   .swap{
     display: block;
   }
-  .wrapper{
-    padding-left: 50px;
-  }
+
   p img {
     width:  50%;
   }
   .hid iframe {
     height: 10%;
   }
-  .menu li img {
-    margin-left: 25%;
+  .menu img {
+    visibility: hidden;
   }
-  .side .text img, span{
-  margin-left: 18%;
-}
-.menu ul li .adv {
-  margin-left: 24%;
-  width: 70%;
+  .swap {
+    width: 80px;
+    height: 80px;
+    background-size: 100%;
+  }
 }
 
-}
 footer div .mail {
   background: url(mail.svg);
 }
 
 .wrapper .vidos {
   color: #6400ff;
+  cursor: pointer;
 }
 .hid {
   width: 100%;
@@ -207,7 +216,20 @@ footer div .mail {
   right: 0%;
   bottom: 0%;
   background-color: black;
-
+}
+.hd {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.5;
+  align-items: center;
+  text-align: center;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  background-color: black;
 }
 .teh {
   width: 50%;
@@ -223,18 +245,8 @@ footer div .mail {
   bottom: 0%;
   background-color: black;
 }
-.adv {
-  margin-left: 3%;
-  border: 3px solid;
-  align-items: center;
-  width: 90%;
-  margin-top: 100%;
-  background: url(1.jpg);
-  background-size: 350%;
-}
-.adv p {
-  font-style: italic;
-  font-size: 18px;
-  text-align: center;
-  border-top: 2px solid;
+
+video {
+  width: 100%;
+  
 }
